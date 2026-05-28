@@ -1,143 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Silver Chat Studio</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #d1d5db; /* Светлый текст */
-            background-color: #0f172a; /* Темный фон (OBS стиль) */
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px 40px;
-            background-color: #1e293b; /* Карточка */
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-        h1 {
-            color: #f8fafc;
-            border-bottom: 2px solid #3b82f6; /* Синяя линия */
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #60a5fa;
-            margin-top: 30px;
-            font-size: 1.4em;
-        }
-        p, li {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .date {
-            color: #94a3b8;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        footer {
-            margin-top: 50px;
-            border-top: 1px solid #334155;
-            padding-top: 20px;
-            text-align: center;
-            color: #64748b;
-            font-size: 0.8em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Privacy Policy - Silver Chat Studio</title>
 </head>
 <body>
 
-<div class="container">
-    <h1>Privacy Policy for Silver Chat Studio</h1>
-    <p class="date">Last updated: May 28, 2026</p>
+<h1>Privacy Policy</h1>
 
-    <h2>1. General Provisions</h2>
-    <p>Silver Chat Studio ("the Application") respects your privacy. This document describes what data we collect, how we use it, and how we protect it.</p>
+<p><strong>Last updated:</strong> 2026</p>
 
-    <h2>2. What Data We Collect</h2>
-    <p>The Application collects and stores data <strong>locally only</strong> on your device:</p>
-    <ul>
-        <li><strong>Twitch OAuth tokens</strong> (access token, refresh token) — for connecting to chat and retrieving stream information</li>
-        <li><strong>Application settings</strong> (WebSocket port, sound settings, reaction triggers, interface preferences)</li>
-        <li><strong>Twitch username and channel ID</strong> — for display in the interface and forming API requests</li>
-    </ul>
+<h2>Overview</h2>
+<p>
+Silver Chat Studio is a Twitch chat overlay and TTS tool for OBS.
+The application processes chat messages and optional OAuth data to provide real-time chat display, AI meme processing, and text-to-speech features.
+</p>
 
-    <h2>3. How We Use Data</h2>
-    <p>Collected data is used <strong>solely for application functionality</strong>:</p>
-    <ul>
-        <li>Connecting to Twitch API to read chat and get stream information</li>
-        <li>Sending messages to OBS via local WebSocket server</li>
-        <li>Saving user settings between sessions</li>
-        <li>Automatic refresh of access tokens when they expire</li>
-    </ul>
+<h2>Data We Collect</h2>
+<ul>
+  <li>Twitch username and chat messages</li>
+  <li>OAuth authentication tokens (if user connects accounts)</li>
+  <li>Application settings (selected voice, UI preferences)</li>
+</ul>
 
-    <h2>4. Data Storage and Protection</h2>
-    <ul>
-        <li><strong>All data is stored locally</strong> in the application folder on your computer</li>
-        <li>We <strong>do not transfer</strong> your data to third parties, advertising networks, or analytics services</li>
-        <li>We <strong>do not send</strong> data to external servers except official platform APIs (Twitch, YouTube, etc.)</li>
-        <li>Files <code>tokens.json</code> and <code>settings.json</code> contain sensitive information — do not share them with others</li>
-    </ul>
+<p>
+We do not collect or store sensitive personal data beyond what is required for the application functionality.
+</p>
 
-    <h2>5. Integration with External Platforms</h2>
-    <p>The Application uses official APIs:</p>
-    <ul>
-        <li><strong>Twitch API</strong> — for reading chat, getting stream information and user avatars</li>
-        <li><strong>Google OAuth</strong> (optional) — for YouTube authorization (if enabled)</li>
-    </ul>
-    <p>By using the Application, you agree to the terms of service of the respective platforms:</p>
-    <ul>
-        <li><a href="https://www.twitch.tv/p/legal/terms-of-service/" target="_blank">Twitch Terms of Service</a></li>
-        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-    </ul>
+<h2>How We Use Data</h2>
+<ul>
+  <li>Display Twitch chat in OBS overlay</li>
+  <li>Generate TTS audio from chat messages</li>
+  <li>Optional meme AI message transformation</li>
+  <li>Save user preferences locally</li>
+</ul>
 
-    <h2>6. Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-        <li><strong>Delete all data</strong> — delete files <code>tokens.json</code>, <code>settings.json</code>, <code>triggers.json</code> from the application folder</li>
-        <li><strong>Revoke access</strong> — in your platform account settings: <a href="https://www.twitch.tv/settings/connections" target="_blank">Twitch Connections</a></li>
-        <li><strong>Uninstall the Application</strong> — simply delete the program folder</li>
-    </ul>
+<h2>Google API Services</h2>
+<p>
+Our application may use Google API Services for authentication or related features.
+</p>
 
-    <h2>7. Security</h2>
-    <p>We take reasonable measures to protect your data:</p>
-    <ul>
-        <li>Tokens are stored locally, not in the cloud</li>
-        <li>All connections to external APIs use HTTPS</li>
-        <li>The Application does not contain ads, trackers, or hidden data collection modules</li>
-    </ul>
+<p>
+Any use of Google user data strictly follows the
+<strong>Google API Services User Data Policy</strong>, including the Limited Use requirements.
+</p>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>We may update this policy. The current version is always available in the project repository:<br>
-    🔗 <a href="https://github.com/DeSjeT/SilverChatStudio" target="_blank">https://github.com/DeSjeT/SilverChatStudio</a></p>
+<p>
+We only use Google user data to provide user-facing functionality explicitly requested by the user.
+We do not:
+</p>
 
-    <h2>9. Contact</h2>
-    <p>For privacy-related questions, contact:</p>
-    <ul>
-        <li><strong>GitHub:</strong> <a href="https://github.com/DeSjeT" target="_blank">https://github.com/DeSjeT</a></li>
-        <li><strong>Email:</strong> desjet89@hotmail.com</li>
-    </ul>
+<ul>
+  <li>Sell or transfer Google user data to third parties</li>
+  <li>Use Google user data for advertising</li>
+  <li>Use Google user data for profiling or analytics outside app functionality</li>
+  <li>Allow human access to data except for security, debugging with consent, or legal requirements</li>
+</ul>
 
-    <footer>
-        By using Silver Chat Studio, you confirm that you have read and agree to this Privacy Policy.
-    </footer>
-</div>
+<h2>Data Storage</h2>
+<p>
+Most data is stored locally on the user’s device or in local configuration files.
+We do not maintain a remote database of user content.
+</p>
+
+<h2>Data Retention</h2>
+<p>
+Data is kept only as long as necessary for application functionality.
+Users may delete local data by removing the application configuration.
+</p>
+
+<h2>User Rights</h2>
+<p>
+Users can request deletion or modification of stored data by contacting support.
+</p>
+
+<h2>Contact</h2>
+<p>
+For privacy-related questions: <br>
+<strong>your_email@example.com</strong>
+</p>
 
 </body>
 </html>
